@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) 
+{
+	int a[8]={2,3,84,75,66,20,15,10},left=0,ans,mid=0;
+	right={sizeof(a)/sizeof(a[0])} - 1;
+	while(left<=right)
+	{
+	  mid=left+(right-left)/2;
+	  if(a[mid]>a[mid-1] || mid==0) 
+	   {
+	       ans=mid;
+	       left=mid+1;
+	   }
+	   else{
+	       ans=mid-1;
+            right=mid-1;	       
+	   }
+	}
+   printf("The largest element in the list is %d",a[ans]);	
+	return 0;
+}
+
